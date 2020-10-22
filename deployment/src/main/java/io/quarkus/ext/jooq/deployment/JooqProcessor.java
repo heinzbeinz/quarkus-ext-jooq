@@ -20,7 +20,7 @@ import org.jooq.DSLContext;
 import org.jooq.tools.LoggerListener;
 import org.objectweb.asm.Opcodes;
 
-import io.quarkus.agroal.deployment.JdbcDataSourceBuildItem;
+import io.quarkus.agroal.spi.JdbcDataSourceBuildItem;
 import io.quarkus.arc.deployment.BeanContainerListenerBuildItem;
 import io.quarkus.arc.deployment.BeanDefiningAnnotationBuildItem;
 import io.quarkus.arc.deployment.GeneratedBeanBuildItem;
@@ -34,7 +34,7 @@ import io.quarkus.deployment.annotations.Record;
 import io.quarkus.deployment.builditem.FeatureBuildItem;
 import io.quarkus.deployment.builditem.nativeimage.ReflectiveClassBuildItem;
 import io.quarkus.deployment.recording.RecorderContext;
-import io.quarkus.deployment.util.HashUtil;
+import io.quarkus.runtime.util.HashUtil;
 import io.quarkus.ext.jooq.runtime.AbstractDslContextProducer;
 import io.quarkus.ext.jooq.runtime.AbstractDslContextProducer.DslContextQualifier;
 import io.quarkus.ext.jooq.runtime.JooqConfig;

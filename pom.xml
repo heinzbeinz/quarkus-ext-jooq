@@ -17,9 +17,11 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <quarkus.version>1.6.1.Final</quarkus.version>
+        <quarkus.version>1.9.0.Final</quarkus.version>
+        <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
+        <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
-        <org.jooq.version>3.13.3</org.jooq.version>
+        <org.jooq.version>3.14.0</org.jooq.version>
         <skipTests>true</skipTests> <!-- skip all tests -->
     </properties>
 
@@ -30,8 +32,8 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-bom-deployment</artifactId>
+                <groupId>${quarkus.platform.group-id}</groupId>
+                <artifactId>${quarkus.platform.artifact-id}</artifactId>
                 <version>${quarkus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
